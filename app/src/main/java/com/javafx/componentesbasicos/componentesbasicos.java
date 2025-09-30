@@ -28,7 +28,7 @@ import javafx.stage.Stage;
 
 public class componentesbasicos extends Application {
 
-    ComboBox comboBox;
+    ComboBox<String> comboBox;
     ChoiceBox<String> choiceBox;
     TextField cajaTexto;
     Label etiquetaCaja;
@@ -58,7 +58,6 @@ public class componentesbasicos extends Application {
         passwordField = new PasswordField();
 
         //ComboBox
-        
         ObservableList<String> platos = FXCollections.observableArrayList(
                 "Primavera", "Verano", "Otoño", "Invierno"
         );
@@ -87,6 +86,7 @@ public class componentesbasicos extends Application {
         );
         choiceBox = new ChoiceBox<>(estaciones);
         choiceBox.setOnAction(event -> {
+            System.out.println(event);
             String selectedOption = choiceBox.getValue();
             System.out.println("Opción seleccionada: " + selectedOption);
         });
@@ -117,7 +117,7 @@ public class componentesbasicos extends Application {
         radioButton5.setToggleGroup(toggleGroup2);
 
         VBox vboxRadios = new VBox(10); // 10px entre elementos
-        vboxRadios.setPadding(new Insets(20)); //10 px de Borde invisible para todo el Layout
+        vboxRadios.setPadding(new Insets(20)); //20 px de Borde invisible para todo el Layout
         vboxRadios.getChildren().addAll(radioButton1, radioButton2, radioButton3, espacioBlanco, radioButton4, radioButton5);
 
         //Controlador de eventos para el primer grupo. Observable es un parámetro obligatorio que
