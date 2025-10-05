@@ -33,7 +33,7 @@ public class EjemploTableViewFoto extends Application {
         ObservableList<RobotFoto> lista = FXCollections.observableArrayList(
                 new RobotFoto("Robocop", "Robocop", "https://images.virgula.me/2017/04/robocop1.jpg", true)
         );
-        TableView tableView = new TableView(lista);
+        TableView<RobotFoto> tableView = new TableView(lista);
         //Se establece a editable la tabla para que se puedan tocar objetos como radios o checkbox
         //Si quisiéramos editar una celda tipo texto (cosa no recomendable) habría que tocar
         //eventos setCellFactory y setOnEditCommit

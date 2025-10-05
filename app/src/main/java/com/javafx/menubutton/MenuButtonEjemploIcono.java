@@ -47,6 +47,7 @@ public class MenuButtonEjemploIcono extends Application {
     }
 
     private ImageView cargaImageViewAssets() throws FileNotFoundException {
+        System.out.println("Working directory: " + System.getProperty("user.dir"));
         FileInputStream input=new FileInputStream("assets/iconos/add.png");
         Image image=new Image(input);
         ImageView imageView=new ImageView(image);

@@ -6,7 +6,6 @@ import javafx.scene.Scene;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
-import static javafx.application.Application.launch;
 import javafx.collections.FXCollections;
 
 import javafx.collections.ListChangeListener;
