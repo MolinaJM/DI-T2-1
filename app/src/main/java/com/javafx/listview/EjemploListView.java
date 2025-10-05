@@ -27,7 +27,7 @@ public class EjemploListView extends Application {
                 "Stranger Things",
                 "Last Of Us",
                 "The Mandalorian",
-                "Friends",
+                "Friends", //La que borramos
                 "The IT"
         );
 
@@ -38,8 +38,10 @@ public class EjemploListView extends Application {
         //La OL se modifica y no es necesario decirle nada al ListView para que recargue
         seriesLista.add("The Continental");
         seriesLista.remove(5);
-        //seriesLista<.clear(); //Limpia el OL y por consiguiente el LV
+        //seriesLista.clear(); //Limpia el OL y por consiguiente el LV
+        System.out.println(seriesLista.size());
         System.out.println("Hay " + seriesLista.size() + " elementos en la lista");
+        //Los OL se pueden ordenar y por tanto, se ve reflejado en el nodo que muestra esa OL.
         lvSeries.getItems().sort(Comparator.naturalOrder()); //Orden natural es alfabético ascendente
 
         //Ocurre lo mismo que con los togglegroup: no sabes el número de elementos, no puedes poner u
@@ -54,7 +56,7 @@ public class EjemploListView extends Application {
         //Qué pasa si es otro componente el que me interesa que dispare el evento?
         //En este caso es el propio lvSeries, pero podría ser un botón sin problemas y 
         //entonces utilizar .getSelectedItem
-        //Pero en este caso lo estamo haciendo todo en el mismo paso
+        //Pero en este caso lo estamos haciendo todo en el mismo paso
         lvSeries.setOnMouseClicked(event -> {
                 if (event.getClickCount() == 1) {//1 Click
                 String serie=lvSeries.getSelectionModel().getSelectedItem();

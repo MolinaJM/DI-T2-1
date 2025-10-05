@@ -18,6 +18,7 @@ public class EjemploTableView extends Application {
         launch(args);
     }
 
+    @SuppressWarnings("unchecked") //Asociado a la línea  tableView.getColumns().addAll(c1, c2);
     @Override
     public void start(Stage primaryStage) throws InterruptedException, FileNotFoundException {
         //TableView son contenedores de un MODELO(Clase) gobernados por una OL
@@ -30,7 +31,7 @@ public class EjemploTableView extends Application {
         ObservableList<Robot> lista = FXCollections.observableArrayList(
                 new Robot("Robocop", "Robocop")
         );
-        TableView tableView = new TableView(lista);
+        TableView<Robot> tableView = new TableView<Robot>(lista);
         //2 Añadiendo de uno en uno
         tableView.getItems().add(new Robot("Terminator", "Terminator"));
         tableView.getItems().add(new Robot("Hall9000", "2001: Odisea del Espacio"));
@@ -49,10 +50,12 @@ public class EjemploTableView extends Application {
 
         //No tiene evento setOnAction...       
         tableView.setOnMouseClicked(e -> {
-             //Aunque no es necesario en este caso concreto, para saber si un ListView o TableView 
+             //Aunque no es necesario en este caso concreto para saber si un ListView o TableView 
+             //(ya que el único nodo que hay es de tipo TV y no hay ningún botón ni nada que lance una acción), 
              //está seleccionado se usa getSelectionModel.isEmpty() : Se suele usar cuando desde otro lugar 
              //(otro botón) queremos comprobar si se ha pinchado en algún elemento
-            System.out.println(!tableView.getSelectionModel().isEmpty());
+            System.out.println(!tableView.getSelectionModel().isEmpty()); 
+            //siempre dará true en este caso porque nunca pierde el foco
             if (e.getClickCount() == 1) {//1 Click 
                 System.out.println("Has hecho click con " + e.getButton());
                 Robot robotSelec = (Robot) tableView.getSelectionModel().getSelectedItem();

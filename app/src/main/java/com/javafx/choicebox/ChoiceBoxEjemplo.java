@@ -18,7 +18,7 @@ public class ChoiceBoxEjemplo extends Application {
 
         //ChoiceBox es un ComboBox pero más limitado, no es tan personalizable
         //ComboBox se podría programar para funcionar con Autocompletado
-        ChoiceBox choiceBox=new ChoiceBox();
+        ChoiceBox<String> choiceBox=new ChoiceBox<String>();
 
         choiceBox.getItems().add("Piedra");
         choiceBox.getItems().add("Papel");

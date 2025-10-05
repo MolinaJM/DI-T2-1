@@ -1,6 +1,8 @@
 package com.javafx.tableview;
 
-//Robot creado con Alt+Insert Code tras introducir las propiedades privadas
+//Tras introducir las propiedades privadas se autogenera el código  
+//con Botón Derecho sobre el código, luego Source Actions, luego Generate Constructors,
+//luego Generate Getters and Setters, incluso Generate toString() 
 public class RobotFoto extends Robot{
 //OJO! Siempre tienen que ser OBJETOS, no datos simples, dado que es obligatorio para configurar las columnas del TV 
     private String fotoURL;

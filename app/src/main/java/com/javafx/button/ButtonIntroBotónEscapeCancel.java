@@ -25,7 +25,7 @@ public class ButtonIntroBotónEscapeCancel extends Application {
         button.setOnAction((event) -> {
             System.out.println("Botón Pulsado!");
         });
-        button.setCancelButton(false);
+        button.setCancelButton(false); 
         button.setDefaultButton(false);
 
         Button buttonDefault = new Button("Default (OK)");

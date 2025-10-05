@@ -10,7 +10,7 @@ import javafx.stage.Stage;
 
 public class ComboBoxEjemploArrayList extends Application {
 
-    ComboBox comboBox;
+    ComboBox<String> comboBox;
 
     public static void main(String[] args) {
         launch(args);
@@ -29,7 +29,7 @@ public class ComboBoxEjemploArrayList extends Application {
         //Si queremos usarlo en el constructor obliga a hacer un casting
         //comboBox = new ComboBox((ObservableList) lista);
         //pero eso no es lo que queremos en este ejemplo
-        comboBox = new ComboBox();
+        comboBox = new ComboBox<String>();
         
         System.out.println("Lista de frutas:");
         for (String fruta : lista) {
@@ -39,7 +39,8 @@ public class ComboBoxEjemploArrayList extends Application {
         // Si modificamos la lista
         lista.add("SANDÍA NO SALE HASTA QUE NO RECARGO");
         
-        //Limpio y recargo
+        //COMENTAR Y DESCOMENTAR para notar cambio 
+        //CÓDIGO DE RECARGA: Limpio y recargo
         comboBox.getItems().clear();
         System.out.println("Lista de frutas:");
         for (String fruta : lista) {
