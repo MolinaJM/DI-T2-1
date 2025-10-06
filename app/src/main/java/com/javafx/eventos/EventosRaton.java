@@ -31,7 +31,7 @@ public class EventosRaton extends Application {
         };
 
         if (event.getClickCount() == 2) {
-            System.out.println("Doble Click con botón" + buttonName);
+            System.out.println("Doble Click con botón " + buttonName);
         } else if (event.getClickCount() == 1) {
             System.out.println("Has clicado con botón " + buttonName);
         }
