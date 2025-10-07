@@ -31,6 +31,7 @@ public class EjemploCargaImágenes extends Application {
         imageView2.setImage(imagen);
         imageView2.setFitHeight(80);
         imageView2.setFitWidth(80);
+        //Probar a cambiar el nombre de la imagen para disparar el error
         imagen.errorProperty().addListener((obs, oldVal, newVal) -> {
             if (newVal) {
                 System.out.println("Error al cargar la imagen: " + imagen.getException());
@@ -38,6 +39,7 @@ public class EjemploCargaImágenes extends Application {
         });
 
         // 3: desde RESOURCES
+        // Cargamos clase actual, cargador de recursos y por último un recurso en concreto
         Image icono = new Image(getClass().getClassLoader().getResourceAsStream("pcicon.png"));
         ImageView imageView3 = new ImageView(icono);
 
