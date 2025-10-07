@@ -6,8 +6,6 @@ import javafx.scene.Scene;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
-import static javafx.application.Application.launch;
-
 public class EjemploScenePuntero extends Application {
 
     public static void main(String[] args) {

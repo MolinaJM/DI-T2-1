@@ -8,7 +8,6 @@ import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 
 public class EjemploAppIcono extends Application {
-
     
     
     public static void main(String[] args) {

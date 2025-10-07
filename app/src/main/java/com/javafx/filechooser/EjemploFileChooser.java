@@ -20,7 +20,6 @@ public class EjemploFileChooser extends Application {
         primaryStage.setTitle("JavaFX App - Selector de Ficheros");
 
         FileChooser fileChooser=new FileChooser();
-        fileChooser.setInitialDirectory(new File("src"));//Dir. dentro de la estructura de proyecto
         //fileChooser.setInitialDirectory(new File("C:\\"));//Otro ejemplo WINDOWS
         //fileChooser.setInitialDirectory(new File("/"));//Otro ejemplo LINUX
         fileChooser.getExtensionFilters().addAll(

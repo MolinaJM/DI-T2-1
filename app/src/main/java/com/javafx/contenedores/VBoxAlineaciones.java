@@ -1,6 +1,5 @@
 package com.javafx.contenedores;
 
-
 import javafx.application.Application;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
@@ -26,6 +25,7 @@ public class VBoxAlineaciones extends Application {
         VBox vbox1=new VBox(button1, button1_2);
         vbox1.setPrefHeight(100);
         vbox1.setAlignment(Pos.CENTER_LEFT);
+        //Hay muchos tipos de alineaciones: TOP, BOTTOM, CENTER y BASELINE (para alinear textos)
 
         VBox vbox2=new VBox(new Button("Button 2"));
         vbox2.setAlignment(Pos.CENTER);

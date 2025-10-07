@@ -24,7 +24,6 @@ public class EjemploMenuBar extends Application {
         abrir.setOnAction(e -> System.out.println("Abrir archivo"));
         salir.setOnAction(e -> primaryStage.close());
 
-
         
         //Menú opciones
         Menu opciones=new Menu("Opciones");

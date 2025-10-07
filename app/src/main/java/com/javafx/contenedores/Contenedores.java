@@ -60,6 +60,7 @@ public class Contenedores extends Application {
         borderPane.setStyle("-fx-background-color: blue;");
         
          // StackPane (CAPAS)
+         // Mostrará la última que se añade, a no ser que se modifique el orden de capas
         StackPane stackPane=new StackPane();
         Button button14=new Button("Botón 14");
         Button button15=new Button("Botón 15");

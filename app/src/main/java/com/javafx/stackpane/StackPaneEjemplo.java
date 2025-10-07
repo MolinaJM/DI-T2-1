@@ -30,12 +30,12 @@ public class StackPaneEjemplo extends Application {
 
         VBox vbox = new VBox();
 
-        stackPane = new StackPane(); //StackPane o Panel de CAPAS
+        stackPane = new StackPane(); // StackPane o Panel de CAPAS
 
         // Añadimos elementos y los tenemos que ir VISIBILIZANDO O INVISIBILIZANDO
         Label label = new Label("Soy una etiqueta");
         label.setStyle("-fx-background-color:yellow");
-        label.setPadding(new Insets(5, 5, 5, 5));//Se añade borde interno
+        label.setPadding(new Insets(5, 5, 5, 5));// Se añade borde interno
         label.setVisible(false);
         stackPane.getChildren().add(label);
 
@@ -53,12 +53,12 @@ public class StackPaneEjemplo extends Application {
         stackPane.getChildren().add(checkBox);
         stackPane.setPrefSize(300, 150);
 
-        vbox.getChildren().add(stackPane);//Si solamente tenemos un parent stackPane hemos de cambiar de capa
-        //para ver los componentes. Se podría haber metido 
+        vbox.getChildren().add(stackPane);// Si solamente tenemos un parent stackPane hemos de cambiar de capa
+        // para ver los componentes. Se podría haber metido
 
         Button controlButton = new Button("CAMBIA!!!");
         vbox.getChildren().add(controlButton);
-        
+
         vbox.setAlignment(Pos.CENTER);
 
         Scene scene = new Scene(vbox, 550, 250);
@@ -73,20 +73,23 @@ public class StackPaneEjemplo extends Application {
         primaryStage.show();
     }
 
-    //Ejemplo de uso de un OL con Nodos
+    // Ejemplo de uso de un OL con Nodos
     private void cambiaElemento() {
         ObservableList<Node> childs = this.stackPane.getChildren();
 
-        if (childs.size() > 1) {
-            Node topNode = childs.get(childs.size() - 1);
-            Node newTopNode = childs.get(childs.size() - 2);
+        Node topNode = childs.get(2);
+        Node newTopNode = childs.get(1);
+        System.out.println("2 PRIMEROS: "+topNode + " " + newTopNode);
 
-            topNode.setVisible(false);
-            topNode.toBack();
-            newTopNode.setVisible(true);
-        }
+        topNode.setVisible(false);
+        topNode.toBack();
+        newTopNode.setVisible(true);
+
+        System.out.println("HIJOS TRAS EL CAMBIO "+childs);
     }
 
 }
-//OBSERVACIONES
-//Si mezclamos la estructura de TOOLBAR+STACKPANE ya tenemos una APP con CAPAS
+// OBSERVACIONES
+// Si mezclamos la estructura de TOOLBAR+STACKPANE ya tenemos una APP con CAPAS
+// Simplemente habría que asociar cada botón del TOOLBAR con la acción:
+// - .toFront() (capa que quiero mostrar), .toBack() capa/s que NO.

@@ -25,7 +25,6 @@ public class EjemploFileChooserImagen extends Application {
         primaryStage.setTitle("JavaFX App - Selector de Ficheros");
 
         FileChooser fileChooser = new FileChooser();
-        fileChooser.setInitialDirectory(new File("src"));
         fileChooser.getExtensionFilters().addAll(
                 new FileChooser.ExtensionFilter("Imagen jpg", "*.jpg"),
                 new FileChooser.ExtensionFilter("Imagen png", "*.png")

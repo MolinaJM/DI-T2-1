@@ -5,7 +5,6 @@ import javafx.scene.Scene;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
-import static javafx.application.Application.launch;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 
