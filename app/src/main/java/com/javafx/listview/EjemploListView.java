@@ -62,6 +62,7 @@ public class EjemploListView extends Application {
                 String serie=lvSeries.getSelectionModel().getSelectedItem();
                 if (serie != null) {
                     System.out.println("Otra forma: " + serie);
+                    System.out.println("Otra forma: " + lvSeries.getSelectionModel().getSelectedIndex());
                 }
             }
         });
