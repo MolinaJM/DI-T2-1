@@ -66,7 +66,8 @@ public class EjemploGridPanePersonalizado extends Application {
         //Un TV o un LV no necesitan esto porque ya lo implementan internamente
         ScrollPane scrollPane = new ScrollPane();
         scrollPane.setContent(gridPane);//Asignamos el contenido
-
+        //scrollPane.setFitToHeight(true);
+        
         Scene scene = new Scene(scrollPane, 400, 400);
         primaryStage.setScene(scene);
         primaryStage.setTitle("GridView Interactivo");
