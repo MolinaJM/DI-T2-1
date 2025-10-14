@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="264.0" prefWidth="365.0" spacing="10.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.javafx.B_cargaOL.miControlador">
+   <children>
+      <ComboBox fx:id="miCombo" prefWidth="150.0" />
+      <ListView fx:id="miLista" prefHeight="200.0" prefWidth="200.0" />
+      <TableView fx:id="miTabla" prefHeight="200.0" prefWidth="200.0">
+        <columns>
+          <TableColumn fx:id="nombreColumn" prefWidth="75.0" text="Nombre" />
+          <TableColumn fx:id="peliColumn" prefWidth="75.0" text="Peli" />
+        </columns>
+      </TableView>
+   </children>
+   <padding>
+      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+   </padding>
+</VBox>

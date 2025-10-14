@@ -53,7 +53,7 @@ public class EjemploGridPanePersonalizado extends Application {
             if (i % col == 0){ //Cambio de fila cada col iteraciones
               fil++;  
             } 
-            System.out.println("metiendo " + seriesLista.get(i) + " en pos " + col + " " + fil);
+            System.out.println("metiendo " + seriesLista.get(i) + " en pos " + i % col + " " + fil);
             StackPane p = creaPane(seriesLista.get(i), i);
             gridPane.add(p, i % col, fil);
         }
