@@ -26,6 +26,7 @@ public class VBoxAlineaciones extends Application {
         vbox1.setPrefHeight(100);
         vbox1.setAlignment(Pos.CENTER_LEFT);
         //Hay muchos tipos de alineaciones: TOP, BOTTOM, CENTER y BASELINE (para alinear textos)
+        // https://openjfx.io/javadoc/25/javafx.graphics/javafx/geometry/Pos.html
 
         VBox vbox2=new VBox(new Button("Button 2"));
         vbox2.setAlignment(Pos.CENTER);

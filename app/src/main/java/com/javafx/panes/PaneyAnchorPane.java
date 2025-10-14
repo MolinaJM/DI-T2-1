@@ -1,4 +1,4 @@
-package com.javafx.contenedores;
+package com.javafx.panes;
 
 import javafx.application.Application;
 import javafx.scene.Scene;
@@ -12,9 +12,10 @@ public class PaneyAnchorPane extends Application {
     /*
     En el Pane, utilizamos las propiedades setLayoutX y setLayoutY para definir la posición
     del botón dentro del Pane: se ancla a una posición FIJA referente al borde superior izquierdo (0,0)
+    
     En el AnchorPane, utilizamos las propiedades setTopAnchor y setLeftAnchor para 
     definir la posición del botón en relación con los bordes superior e izquierdo del AnchorPane.
-    Lo mismo con setBottomAnchor y setRightAnchor: se ancla con respectoa a un BORDE
+    Y lo mismo con setBottomAnchor y setRightAnchor.
      */
     public static void main(String[] args) {
         launch(args);

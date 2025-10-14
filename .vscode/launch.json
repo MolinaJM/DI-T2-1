@@ -6,13 +6,6 @@
     "configurations": [
         {
             "type": "java",
-            "name": "Ejemplo_1_PantallaCompleta",
-            "request": "launch",
-            "mainClass": "com.javafx.stage.Ejemplo_1_PantallaCompleta",
-            "projectName": "Tema2-ProyectoBase-DI-T2-1-app"
-        },
-        {
-            "type": "java",
             "name": "Current File",
             "request": "launch",
             "mainClass": "${file}",

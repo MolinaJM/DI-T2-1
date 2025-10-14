@@ -40,7 +40,7 @@ public class Contenedores extends Application {
         GridPane.setConstraints(button5, 0, 0); // Columna 0, Fila 0
         GridPane.setConstraints(button6, 1, 0); // Columna 1, Fila 0
         GridPane.setConstraints(button10, 0, 1); // Columna 0, Fila 1
-        GridPane.setConstraints(button11, 1, 1); // Columna 1, Fila 1
+        GridPane.setConstraints(button11, 5, 1); // Columna 1, Fila 1
 
         gridPane.getChildren().addAll(button5, button6, button10, button11);
         gridPane.setStyle("-fx-background-color: green;");
@@ -61,6 +61,7 @@ public class Contenedores extends Application {
         
          // StackPane (CAPAS)
          // Mostrará la última que se añade, a no ser que se modifique el orden de capas
+         // Por defecto centra todo.
         StackPane stackPane=new StackPane();
         Button button14=new Button("Botón 14");
         Button button15=new Button("Botón 15");
