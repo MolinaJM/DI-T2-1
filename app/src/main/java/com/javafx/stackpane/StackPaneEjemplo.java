@@ -66,9 +66,7 @@ public class StackPaneEjemplo extends Application {
         primaryStage.setTitle("StackPane Layout Ejemplo");
         primaryStage.setScene(scene);
 
-        controlButton.setOnAction(e -> {
-            cambiaElemento();
-        });
+        controlButton.setOnAction(e -> cambiaElemento());
 
         primaryStage.show();
     }
